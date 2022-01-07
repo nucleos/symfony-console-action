@@ -20,7 +20,16 @@ jobs:
     runs-on: "ubuntu-latest"
 
     steps:
-    - name: "Merge"
+    - name: "Checkout"
+      uses: "actions/checkout@v2"
+      
+    - name: "Install PHP with extensions"
+      uses: "shivammathur/setup-php@v2"
+        
+    - name: "Install Composer dependencies"
+      uses: "ramsey/composer-install@v2"
+      
+    - name: "Lint"
       uses: "nucleos/symfony-console-action@1.0.0"
       env:
         kernel: "App\\CustomKernel"
