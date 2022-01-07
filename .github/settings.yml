@@ -1,0 +1,6 @@
+_extends: .github
+
+repository:
+  name: symfony-console-action
+  description: 🤖 GitHub Action to run symfony console commands.
+  topics: symfony-console, symfony, cli, console, action, automation, github-actions
